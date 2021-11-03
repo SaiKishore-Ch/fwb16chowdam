@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p Search results for Gun  
+  p 
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let Gun  = [
+                    {
+                        "name": "Machine Gun",
+                        "color": "black" ,
+                        "weight": 30
+                    },
+                    {
+                        "name": "Sniper",
+                        "color": "brown" ,
+                        "weight": 40
+                    },
+                    {
+                        "name": "Short Gun",
+                        "color": "grey" ,
+                        "weight": 25
+                    },                   
+                ]
+            each v,index in Gun 
+                div(class="col-sm-2" ) #{v.name}
+                div(class="col-sm-2" ) #{v.color}
+                div(class="col-sm-2" ) #{v.weight}
+
+  
